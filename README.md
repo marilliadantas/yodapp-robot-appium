@@ -2,6 +2,24 @@
 
 Este é um guia para começar um projeto Node utilizando Appium para automação de testes mobile e Robot Framework para escrever casos de teste.
 
+## 👨‍💻 Tecnologias
+
+Você vai precisar das seguintes ferramentas e tecnologias:
+
+- [Python](https://www.python.org/downloads/)
+- [Node.js](https://nodejs.org/en/)
+- [Java JDK8](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
+- [Android Studio](https://developer.android.com/studio/index.html?hl=pt-br)
+- [Appium](http://appium.io/downloads.html)
+- [Robot Framework](https://robotframework.org/)
+
+## 💻 Ferramentas
+
+Você pode baixar e instalar o JDK 8 através [desse link](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html).
+
+Android Studio é a IDE oficial para desenvolvimento e testes de aplicativos para Android
+Você pode baixar a ultima através [desse link](https://developer.android.com/studio/index.html?hl=pt-br)
+
 ## Iniciando o Projeto Node
 
 Para iniciar um projeto Node, utilize o seguinte comando:
@@ -58,3 +76,6 @@ Para executar os testes, utilize o seguinte comando:
 
 ```bash
 robot -d ./logs/ tests/nome_do_teste.robot
+
+```bash
+robot -d ./logs -i long tests/click.robot

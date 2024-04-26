@@ -1,21 +1,29 @@
 *** Settings ***
-Library    AppiumLibrary
+Resource   ../resources/base.resource
 
 *** Test Cases ***
 Deve realizar um click simples
-    Open Application     http://localhost:4723
-    ...                  platformName=Android
-    ...                  deviceName=Android Emulator
-    ...                  automationName=UIAutomator2
-    ...                  app=${EXECDIR}/app/yodapp-beta.apk
-    ...                  udid=emulator-5554
-    ...                  autoGrantPermissions=true
+    Start session
+    Get started
+    Navigate to                Clique em Botões
+    Go to item                 Clique simples             Botão clique simples
+    
+    Click Text                                            CLIQUE SIMPLES
+    Wait Until Page Contains                              Isso é um clique simples
 
+    Close session
 
-    Wait Until Page Contains         Yodapp              10
+Deve realizar um click longo
+    [Tags]    long
+    Start session
+    Get started
+    Navigate to               Clique em Botões
+    Go to item                Clique longo               Botão clique longo
 
-    Click Text    QAX
+    ${locator}                Set Variable               id=com.qaxperience.yodapp:id/long_click
+    ${Positions}              Get Element Location       ${locator}       
+        
+    Tap With Positions        1000                       ${${Positions}[x], ${Positions}[y]}
+    Wait Until Page Contains                             Isso é um clique longo
 
-    Sleep    5
-
-    Close Application
+    Close session
