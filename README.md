@@ -1,4 +1,4 @@
-# <h1 align="center">Projeto Node com Appium e Robot Framework</h1>
+# <h1 align="center">Projeto com Appium e Robot Framework</h1>
 
 Este é um guia para começar um projeto Node utilizando Appium para automação de testes mobile e Robot Framework para escrever casos de teste.
 
