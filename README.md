@@ -1,4 +1,4 @@
-# Projeto Node com Appium e Robot Framework
+# <h1 align="center">Projeto Node com Appium e Robot Framework</h1>
 
 Este é um guia para começar um projeto Node utilizando Appium para automação de testes mobile e Robot Framework para escrever casos de teste.
 
@@ -6,12 +6,12 @@ Este é um guia para começar um projeto Node utilizando Appium para automação
 
 Você vai precisar das seguintes ferramentas e tecnologias:
 
-- [Python](https://www.python.org/downloads/)
-- [Node.js](https://nodejs.org/en/)
-- [Java JDK8](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
-- [Android Studio](https://developer.android.com/studio/index.html?hl=pt-br)
-- [Appium](http://appium.io/downloads.html)
-- [Robot Framework](https://robotframework.org/)
+- 🐍 [Python](https://www.python.org/downloads/)
+- 🟢 [Node.js](https://nodejs.org/en/)
+- ☕ [Java JDK8](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
+- 📱 [Android Studio](https://developer.android.com/studio/index.html?hl=pt-br)
+- 📱 [Appium](http://appium.io/downloads.html)
+- 🤖 [Robot Framework](https://robotframework.org/)
 
 ## 💻 Ferramentas
 
@@ -76,6 +76,11 @@ Para executar os testes, utilize o seguinte comando:
 
 ```bash
 robot -d ./logs/ tests/nome_do_teste.robot
+```
+
+## Executando Testes com uso de tag
+Para executar os testes com uso de tag, utilize o seguinte comando:
 
 ```bash
 robot -d ./logs -i long tests/click.robot
+```
