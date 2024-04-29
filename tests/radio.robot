@@ -1,5 +1,5 @@
 *** Settings ***
-Resource   ../resources/base.resource
+Resource    ../resources/main.robot
 
 *** Test Cases ***
 Deve selecionar a opção em Javascript
@@ -9,7 +9,7 @@ Deve selecionar a opção em Javascript
     Navigate to     Check e Radio
     Go to item      Botões de radio          Escolha sua linguagem preferida
 
-    Click Element   xpath=//android.widget.RadioButton[contains(@text, "Javascript")]
+    Click Element   ${RADIO_BTN}
 
     Sleep    3
     

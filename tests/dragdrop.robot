@@ -9,8 +9,8 @@ Deve arrastar o Skywalker e soltar no topo da lista
     Navigate to    Star Wars
     Go to item     Lista         Luke Skywalker
 
-    ${origin}    Set Variable    //android.widget.TextView[@text="@skywalker"]/../../..//*[contains(@resource-id, "drag_handle")]
-    ${target}    Set Variable    //android.widget.TextView[@text="@mando"]/../../..//*[contains(@resource-id, "drag_handle")]
+    ${origin}    Set Variable    ${ORIGIN_ELEMENT}
+    ${target}    Set Variable    ${TARGET_ELEMENT} 
     
     My Drag And Drop    ${origin}    ${target}
     
