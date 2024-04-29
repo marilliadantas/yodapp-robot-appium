@@ -1,5 +1,5 @@
 *** Settings ***
-Resource   ../resources/base.resource
+Resource    ../resources/main.robot
 
 *** Test Cases ***
 Deve marcar as tags que usam Appium
@@ -12,9 +12,9 @@ Deve marcar as tags que usam Appium
     @{techs}        Create List        Ruby   Python   Java    Javascript   C#   Robot Framework
 
     FOR    ${tech}   IN   @{techs}
-        Click Element                  xpath=//android.widget.CheckBox[contains(@text, "${tech}")]
+        Click Element                  ${TECH_CHECKBOX}
         Sleep    1
-    END 
+    END
 
     Sleep    3
     

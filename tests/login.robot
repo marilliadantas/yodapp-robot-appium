@@ -1,5 +1,5 @@
 *** Settings ***
-Resource   ../resources/base.resource
+Resource    ../resources/main.robot
 
 *** Test Cases ***
 Deve logar com sucesso
@@ -8,9 +8,9 @@ Deve logar com sucesso
     Navigate to                    Formulários
     Go to item                     Login                                      Olá Padawan, vamos testar o login?
 
-    Input Text                     id=com.qaxperience.yodapp:id/etEmail       yoda@qax.com
-    Input Text                     id=com.qaxperience.yodapp:id/etPassword    jedi
-    Click Element                  id=com.qaxperience.yodapp:id/btnSubmit
+    Input Text                     ${EMAIL_INPUT}                             yoda@qax.com
+    Input Text                     ${SENHA_INPUT}                             jedi
+    Click Element                  ${ENTRAR_BTN}
 
     Wait Until Page Contains       Boas vindas, logado você está.             10
 
@@ -22,9 +22,9 @@ Não deve logar com email incorreto
     Navigate to                    Formulários
     Go to item                     Login                                       Olá Padawan, vamos testar o login?
 
-    Input Text                     id=com.qaxperience.yodapp:id/etEmail        teste@qax.com
-    Input Text                     id=com.qaxperience.yodapp:id/etPassword     jedi
-    Click Element                  id=com.qaxperience.yodapp:id/btnSubmit
+    Input Text                     ${EMAIL_INPUT}                              teste@qax.com
+    Input Text                     ${SENHA_INPUT}                              jedi
+    Click Element                  ${ENTRAR_BTN}
 
     Wait Until Page Contains       Oops! Credenciais incorretas.               10
 
@@ -36,9 +36,9 @@ Não deve logar com senha incorreta
     Navigate to                    Formulários
     Go to item                     Login                                       Olá Padawan, vamos testar o login?
 
-    Input Text                     id=com.qaxperience.yodapp:id/etEmail        yoda@qax.com
-    Input Text                     id=com.qaxperience.yodapp:id/etPassword     sith
-    Click Element                  id=com.qaxperience.yodapp:id/btnSubmit
+    Input Text                     ${EMAIL_INPUT}                              yoda@qax.com
+    Input Text                     ${SENHA_INPUT}                              sith
+    Click Element                  ${ENTRAR_BTN}
 
     Wait Until Page Contains       Oops! Credenciais incorretas.               10
 
@@ -50,9 +50,9 @@ Não deve logar com email em branco
     Navigate to                    Formulários
     Go to item                     Login                                      Olá Padawan, vamos testar o login?
 
-    Clear Text                     id=com.qaxperience.yodapp:id/etEmail       
-    Input Text                     id=com.qaxperience.yodapp:id/etPassword    jedi
-    Click Element                  id=com.qaxperience.yodapp:id/btnSubmit
+    Clear Text                     ${EMAIL_INPUT}       
+    Input Text                     ${SENHA_INPUT}                             jedi
+    Click Element                  ${ENTRAR_BTN}
 
     Wait Until Page Contains       Email válido você deve informar!           10
 
@@ -64,9 +64,9 @@ Não deve logar com senha em branco
     Navigate to                   Formulários
     Go to item                    Login                                       Olá Padawan, vamos testar o login?
 
-    Input Text                    id=com.qaxperience.yodapp:id/etEmail        yoda@qax.com
-    Clear Text                    id=com.qaxperience.yodapp:id/etPassword             
-    Click Element                 id=com.qaxperience.yodapp:id/btnSubmit
+    Input Text                    ${EMAIL_INPUT}                              yoda@qax.com
+    Clear Text                    ${SENHA_INPUT}            
+    Click Element                 ${ENTRAR_BTN}
 
     Wait Until Page Contains      Uma senha você deve informar!               10
 
