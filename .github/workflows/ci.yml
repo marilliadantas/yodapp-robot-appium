@@ -22,6 +22,8 @@ jobs:
       - name: Install dependencies
         run: |
           echo Instalação das depedências do Projeto
+          npm i appium@2.0.1
+          npx appium driver install uiautomator2
           pip install robotframework
           pip install --upgrade robotframework-appiumlibrary
 
