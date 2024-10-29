@@ -10,7 +10,7 @@ Deve arrastar o Skywalker e soltar no topo da lista
     Go to item     Lista         Luke Skywalker
 
     ${origin}    Set Variable    ${ORIGIN_ELEMENT}
-    ${target}    Set Variable    ${TARGET_ELEMENT} 
+    ${target}    Set Variable    ${TARGET_ELEMENT}
     
     My Drag And Drop    ${origin}    ${target}
     

@@ -11,7 +11,7 @@ Start session
     ...                  deviceName=Android Emulator
     ...                  automationName=UIAutomator2
     ...                  app=${EXECDIR}/app/yodapp-beta.apk
-    ...                  udid=emulator-5554
+    ...                  udid=ZF524PFKZB
     ...                  autoGrantPermissions=true
 
 Get started
